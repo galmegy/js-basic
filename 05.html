@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="one">hello world one</h1>
+    <h1 class="one two" >hello world two</h1>
+    <h1 id="four" class="one two three">hello world 3</h1>
+    <h1 >hello world 4</h1>
+    <h1 >hello world 5</h1>
+    <h1 >hello world 6</h1>
+    <p>Hello world</p>
+
+    <button id="two" onclick="f()">눌러!!</button>
+
+
+
+    <!-- jQuery는 (jquery cdn검색: lib를 내컴에 설치않고 사용할수 있도록 해줌)
+    1. 엘리먼트를 선택할 수 있는 강력한 방법
+    2. 선택된 엘리먼트를 제어할 수 있는 방법 -->
+    <!-- 이 lib는 jQuery CDN이다 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>    
+
+
+    <script>
+        function f() {
+            $('#one').html('반갑습니다~~~');  // #는 id, html은 innerHTML을 표현
+            // document.getElementById('one').style.backgroundColor = "red";
+            // console.log(k);
+        }
+
+        $('#two').click(
+            function f() {
+                $('h1:first').html('<mark>반갑습니다~~~!!!</mark>').fadeOut(3000).fadeIn(3000);
+                $('h1:last').html('<mark>반갑습니다~~~!!!</mark>');
+            }
+        )
+        // 메소드(속성값 변경, DOM탐색, css, 이벤트, 효과, etc)
+        /*
+        .text 
+        .html 
+        .val 
+        .hide 
+        .show 
+        .fadeIn 
+        .fadeOut 
+        */
+
+    </script>
+
+</body>
+
+<style>
+    p {
+        background-color: skyblue;
+    }
+</style>
+
+</html>
